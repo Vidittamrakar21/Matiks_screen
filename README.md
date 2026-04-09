@@ -5,10 +5,16 @@ A **production-level, visually rich game result / streak screen** built using **
 This project demonstrates **advanced UI/UX, animation orchestration, and interaction design** 
 
 ---
+# Demo Video
+
+ Link - https://youtube.com/shorts/5DfDEYPvNAE?si=6l8Ue31DelwWmRUo
+ 
+---
+## Screenshot
 
 <img width="400" height="900" alt="IMG_4094" src="https://github.com/user-attachments/assets/520e6161-d471-4bb8-83c0-c141f59898af" />
 
-
+---
 #  Features
 
 ##  Core Features
