@@ -1,50 +1,163 @@
-# Welcome to your Expo app 👋
+#  Animated Game Result Screen (React Native (Expo) + Reanimated)
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+A **production-level, visually rich game result / streak screen** built using **React Native (Expo) + Reanimated**, inspired by Matiks.
 
-## Get started
+This project demonstrates **advanced UI/UX, animation orchestration, and interaction design** 
 
-1. Install dependencies
+---
 
-   ```bash
-   npm install
-   ```
+#  Features
 
-2. Start the app
+##  Core Features
 
-   ```bash
-   npx expo start
-   ```
+*  **Animated Score Counter**
 
-In the output, you'll find options to open the app in a
+  * Smooth interpolation from `0 → FINAL_SCORE`
+  * Uses `useDerivedValue` + `interpolate`
 
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
+*  **7-Combo Streak UI**
 
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
+  * Large bold streak number
+  * Animated fire icon (breathing + tilt effect)
+  * Matches real-world product UI patterns
 
-## Get a fresh project
 
-When you're ready, run:
+---
+
+##  UI/UX Design
+
+*  **Dark Theme (`#171717`)**
+*  **Game-like layout hierarchy**
+*  Mobile-first responsive design
+*  **Glassmorphism + soft shadows**
+*  Orange accent system for streak emphasis
+
+---
+
+##  Advanced Animations
+
+### 1. Score Counter Animation
+
+* Uses `useSharedValue` + `withTiming`
+* Smooth easing curve for natural feel
+
+### 2. Fire Animation 
+
+* Continuous **scale pulse**
+* Subtle **rotation oscillation**
+* Creates “alive” feeling
+
+### 3. Button Interaction
+
+* Press feedback with `withSequence`
+* Scale down → spring back
+
+---
+
+##  Premium CTA Button (Highlight Feature)
+
+Custom-built **“App Store quality” button** with:
+
+*  Glow layer (depth simulation)
+*  Glass highlight (top reflection)
+*  Animated shimmer sweep
+*  Smooth press feedback
+
+---
+
+##  Confetti System
+
+* Particle-based confetti using Reanimated
+* Randomized:
+
+  * Position
+  * Color (HSL)
+  * Rotation
+  * Duration
+* Fade-out + gravity fall effect
+
+---
+
+##  Haptics Feedback
+
+* Uses `expo-haptics`
+* Triggers **success vibration** when animation completes
+
+---
+
+#  Technical Concepts Used
+
+* `react-native-reanimated v3`
+* Shared values & derived values
+* Interpolation
+* Sequenced animations
+* Repeating animations
+* UI thread vs JS thread (`runOnJS`)
+* Absolute positioning & layering
+* Animation orchestration
+
+---
+
+
+
+#  Setup Instructions
+
+## 1️. Clone Repository
 
 ```bash
-npm run reset-project
+git clone https://github.com/Vidittamrakar21/Matiks_screen.git
+cd matiks
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## 2️. Install Dependencies
 
-## Learn more
+```bash
+npm install
+```
 
-To learn more about developing your project with Expo, look at the following resources:
+---
 
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
+## 3️. Configure Reanimated
 
-## Join the community
+### babel.config.js
 
-Join our community of developers creating universal apps.
+```js
+module.exports = {
+  presets: ['babel-preset-expo'],
+  plugins: ['react-native-reanimated/plugin'],
+};
+```
 
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+---
+
+## 4️. Run the App
+
+```bash
+npx expo start
+```
+
+Scan QR with **Expo Go**
+
+---
+
+#  How It Works
+
+1. App loads → `progress` animates from `0 → 1`
+2. Score interpolates to final value
+3. Fire animation runs continuously
+4. On completion:
+
+   *  Confetti triggers
+   *  Haptic feedback fires
+5. Button remains interactive with shimmer
+
+---
+
+
+#  UI Inspiration
+
+* Matiks Game Screens
+
+
+
+
