@@ -6,6 +6,9 @@ This project demonstrates **advanced UI/UX, animation orchestration, and interac
 
 ---
 
+<img width="400" height="900" alt="IMG_4094" src="https://github.com/user-attachments/assets/520e6161-d471-4bb8-83c0-c141f59898af" />
+
+
 #  Features
 
 ##  Core Features
